@@ -16,7 +16,10 @@ describe("Mock Testing", function () {
   it("Tag Mock", function () {
     cy.intercept("GET", "/api/tags", { fixture: "Tags.json" });
     cy.contains("Your Feed").should("be.visible");
-    cy.get(".tag-list").should("contain", "reiciendis");
+    cy.get("div.tag-list")
+      .should("contain", "cypress")
+      .and("contain", "unit")
+      .and("contain", "unit");
   });
 
   it("Article Mock", function () {

@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-27T16:21:29.737Z",
+    "end": "2024-06-27T16:21:34.604Z",
+    "duration": 4867,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5314a19-9463-496c-b16d-5e3e7abc6273",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1987fd14-066d-40d1-8dd0-06181577cfd2",
+          "title": "Login Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Conduit - Valid Credentials",
+              "fullTitle": "Login Functionality Conduit - Valid Credentials",
+              "timedOut": null,
+              "duration": 2271,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.checkYourFeedIsVisible().clickSettingsButton().clickLogoutButton();",
+              "err": {},
+              "uuid": "63062d57-66e4-4a8d-a4de-33de58320759",
+              "parentUUID": "1987fd14-066d-40d1-8dd0-06181577cfd2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Conduit - Invalid Credentials",
+              "fullTitle": "Login Functionality Conduit - Invalid Credentials",
+              "timedOut": null,
+              "duration": 2520,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.conduitLogin(this.data.invalidEmail, this.data.invalidPassword);\ncy.get(\".error-messages\").should(\"contain\", \"email or password is invalid\");",
+              "err": {},
+              "uuid": "8af94886-fd20-4b2c-a977-abc69549f66b",
+              "parentUUID": "1987fd14-066d-40d1-8dd0-06181577cfd2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63062d57-66e4-4a8d-a4de-33de58320759",
+            "8af94886-fd20-4b2c-a977-abc69549f66b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
