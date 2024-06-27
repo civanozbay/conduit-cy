@@ -27,5 +27,5 @@ class HomePage extends BasePage {
     this.clickElement(this.getSettings(), true);
   }
 }
-
-export default HomePage;
+const homePage = new HomePage();
+export default homePage;

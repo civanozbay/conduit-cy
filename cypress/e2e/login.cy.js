@@ -1,13 +1,9 @@
-import LandingPage from "./pages/LandingPage";
-import HomePage from "./pages/HomePage";
-import SettingsPage from "./pages/SettingsPage";
-import LoginPage from "./pages/LoginPage";
+import landingPage from "./pages/LandingPage";
+import homePage from "./pages/HomePage";
+import settingsPage from "./pages/SettingsPage";
+import loginPage from "./pages/LoginPage";
 
 describe("Login Functionality", () => {
-  const landingPage = new LandingPage();
-  const homePage = new HomePage();
-  const loginPage = new LoginPage();
-  const settingsPage = new SettingsPage();
   beforeEach(function () {
     cy.fixture("conduitLoginData").as("data");
   });

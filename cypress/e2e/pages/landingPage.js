@@ -7,5 +7,5 @@ class LandingPage extends BasePage {
     this.clickElement(this.getSignin(), true);
   }
 }
-
-export default LandingPage;
+const landingPage = new LandingPage();
+export default landingPage;
