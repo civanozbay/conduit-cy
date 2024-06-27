@@ -1,5 +1,6 @@
 import BasePage from "./BasePage";
 import settingsPage from "./SettingsPage";
+import newPostPage from "./newPostPage";
 class HomePage extends BasePage {
   getYourFeed() {
     return "Your Feed";
@@ -28,6 +29,10 @@ class HomePage extends BasePage {
   clickSettingsButton() {
     this.clickElement(this.getSettings(), true);
     return settingsPage;
+  }
+  clickNewPostButton() {
+    this.clickElement(this.getNewPost(), true);
+    return newPostPage;
   }
 }
 const homePage = new HomePage();
