@@ -1,17 +1,20 @@
 import landingPage from "./pages/LandingPage";
-import homePage from "./pages/HomePage";
-import settingsPage from "./pages/SettingsPage";
-import loginPage from "./pages/LoginPage";
 
 describe("Login Functionality", () => {
   beforeEach(function () {
     cy.fixture("conduitLoginData").as("data");
   });
   it.only("Conduit - Valid Credentials", function () {
-    cy.conduitLogin(this.data.validEmail, this.data.validPassword);
-    homePage.checkYourFeedIsVisible();
-    homePage.clickSettingsButton();
-    settingsPage.clickLogoutButton();
+    landingPage;
+    cy.visit("/");
+    landingPage
+      .clickSigninButton()
+      .enterEmail(this.data.validEmail)
+      .enterPasssword(this.data.validPassword)
+      .clickSigninButton()
+      .checkYourFeedIsVisible()
+      .clickSettingsButton()
+      .clickLogoutButton();
   });
   it("Conduit - Invalid Credentials", function () {
     cy.conduitLogin(this.data.invalidEmail, this.data.invalidPassword);
