@@ -1,9 +1,10 @@
-class SettingsPage {
+import BasePage from "./BasePage";
+class SettingsPage extends BasePage {
   getLogoutButton() {
     return "Or click here to logout.";
   }
   clickLogoutButton() {
-    cy.contains(this.getLogoutButton()).click();
+    this.clickElement(this.getLogoutButton(), true);
   }
 }
 export default SettingsPage;

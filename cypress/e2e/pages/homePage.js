@@ -1,6 +1,7 @@
-class HomePage {
+import BasePage from "./BasePage";
+class HomePage extends BasePage {
   getYourFeed() {
-    return "Your feed";
+    return "Your Feed";
   }
 
   getGlobalFeed() {
@@ -20,9 +21,11 @@ class HomePage {
   }
 
   checkYourFeedIsVisible() {
-    cy.contains(this.getYourFeed()).should("be.visible");
+    this.isElementVisible(this.getYourFeed(), true);
   }
   clickSettingsButton() {
-    cy.contains(this.getSettings()).click();
+    this.clickElement(this.getSettings(), true);
   }
 }
+
+export default HomePage;

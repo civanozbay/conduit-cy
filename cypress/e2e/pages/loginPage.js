@@ -1,4 +1,5 @@
-class LoginPage {
+import BasePage from "./BasePage";
+class LoginPage extends BasePage {
   getEmail() {
     return 'input[type="email"]';
   }
@@ -9,15 +10,15 @@ class LoginPage {
     return 'button[type="submit"]';
   }
   enterEmail(email) {
-    cy.get(this.getEmail()).type(email);
+    this.fillText(this.getEmail(), email);
   }
 
   enterPasssword(password) {
-    cy.get(this.getPassword()).type(password);
+    this.fillText(this.getPassword, password);
   }
 
   clickSignin(password) {
-    cy.get(this.getSigninButton()).click();
+    this.fillText(this.getSigninButton);
   }
 }
 
